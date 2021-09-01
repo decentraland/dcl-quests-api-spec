@@ -1,0 +1,15 @@
+get:
+  operationId: getStatus
+  tags:
+    - Quests
+  summary: status
+  description: Get Server Status  
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../components/examples/quests/200-status.json
