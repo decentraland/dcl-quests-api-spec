@@ -1,0 +1,40 @@
+openapi: 3.0.2
+info:
+  version: 1.0.0
+  title: Decentraland Quests Server
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  x-logo:
+    url: 'https://cryptologos.cc/logos/decentraland-mana-logo.png'
+  description: >
+    Quests can be defined as sets of tasks that the player must complete in
+    order to achieve an objective,  and usually receive a reward for doing so.
+tags:
+  - name: Quests
+    description: Quest API Descriptions
+  - name: User
+    description: Users API Description
+servers:
+  - url: 'https://quests-api.decentraland.io'
+paths:
+  /status:
+    get:
+      operationId: getStatus
+      tags:
+        - Quests
+      summary: status
+      description: Get Server Status
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+              example:
+                status: ok
+                version: 1.2.3
+                currentTime: 1630529093184
+                commitHash: 46ed33e339acd9c4a53e9b6b9269ff3c01283bac
+

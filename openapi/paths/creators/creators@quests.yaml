@@ -5,6 +5,14 @@ get:
     - Quests
   description: >- 
     Retrieves the list of existing Quests in the Server.
+  parameters:
+    - in: query 
+      name: details      
+      schema:
+        type: boolean
+        example: true
+      description: >- 
+        When this is set to true the response list of quest will include the tasks for each quest
   responses:
     '200':
       description: List of Quests
