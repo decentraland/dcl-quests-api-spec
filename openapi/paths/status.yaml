@@ -1,9 +1,9 @@
 get:
-  operationId: getStatus
+  operationId: getServerStatus
   tags:
     - Quests
-  summary: status
-  description: Get Server Status  
+  summary: Server Status
+  description: Get Quests Server Status  
   responses:
     '200':
       description: OK

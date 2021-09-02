@@ -1,0 +1,16 @@
+get:
+  operationId: getQuests
+  summary: List of Quests
+  tags:
+    - Quests
+  description: >- 
+    Retrieves the list of existing Quests in the Server.
+  responses:
+    '200':
+      description: List of Quests
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../../components/examples/quests/200-quests.json

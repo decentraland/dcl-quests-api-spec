@@ -15,10 +15,14 @@ tags:
     description: Quest API Descriptions
   - name: User
     description: Users API Description
+  - name: Rewards
+    description: Rewards API Description
 servers:
   - url: 'https://quests-api.decentraland.io'  
 paths:  
   /status:
     $ref: paths/status.yaml
+  /creators/quests:
+    $ref: paths/creators/creators@quests.yaml
 
   

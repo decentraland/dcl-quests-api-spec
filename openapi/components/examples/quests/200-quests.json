@@ -1,0 +1,104 @@
+[
+    {
+        "id": "4e72efcb-4f92-4eed-ad6b-ec683d42bd76",
+        "name": "Portal puzzle reloaded",
+        "description": "A super tough puzzle thing",
+        "thumbnailEntry": "https://github.com/decentraland-scenes/Block-dog/blob/master/screenshot/screenshot.png?raw=true",
+        "thumbnailBanner": "https://github.com/decentraland-scenes/Block-dog/blob/master/screenshot/screenshot.png?raw=true",
+        "requirements": [],
+        "active": true,
+        "visibility": "visible",
+        "deletedAt": null,
+        "rewards": [
+            {
+                "id": "1addb24b-64ab-4632-bab1-b91905baab53",
+                "type": "poap",
+                "name": "mypoap",
+                "metadata": {},
+                "deletedAt": null,
+                "imageUrl": "https://storage.googleapis.com/poapmedia/decentraland-1st-anniversary-party-2021-logo-1613742619448.png",
+                "flow": {
+                    "id": "12768e40-d541-4cfe-9b97-c12916d522e6",
+                    "type": "poap",
+                    "serverBaseUrl": null,
+                    "deletedAt": null,
+                    "campaingKey": null,
+                    "event": "wtfrnfts1"
+                }
+            }
+        ],
+        "creator": null
+    },
+    {
+        "id": "2b535663-73e9-4849-939f-a1129aa8b208",
+        "name": "Polygonal Coin Hunt",
+        "description": "Hunt all the coins scattered among different scenes developed by Polygonal Mind",
+        "thumbnailEntry": "https://gateway.pinata.cloud/ipfs/QmVGLjdZr4U2ELPxkUMwWiMHynX2os7ZxqSyZTT2bhFVPX",
+        "thumbnailBanner": "https://gateway.pinata.cloud/ipfs/QmVGLjdZr4U2ELPxkUMwWiMHynX2os7ZxqSyZTT2bhFVPX",
+        "requirements": [],
+        "active": true,
+        "visibility": "secret",
+        "deletedAt": null,
+        "rewards": [
+            {
+                "id": "18d873a8-7a25-4e56-9492-24a11938a663",
+                "type": "poap",
+                "name": "polypoap1",
+                "metadata": {},
+                "deletedAt": null,
+                "imageUrl": "https://storage.googleapis.com/poapmedia/polygonal-coin-hunt-01-2021-logo-1627638420638.png",
+                "flow": {
+                    "id": "131f828c-5378-4fc9-b8d1-414d862a09d5",
+                    "type": "poap",
+                    "serverBaseUrl": null,
+                    "deletedAt": null,
+                    "campaingKey": null,
+                    "event": "4814"
+                }
+            }
+        ],
+        "creator": {
+            "id": "7938a19a-6efe-4227-b7df-cc2cc19f7859",
+            "address": null,
+            "username": "ai47patos",
+            "admin": false,
+            "deletedAt": null
+        }
+    },
+    {
+        "id": "9b7a522b-a1a5-4418-a799-1dec0b3e6e86",
+        "name": "Slimes invasion",
+        "description": "Slimes are invading the world! Help us kill as much slimes as you can to stop this disaster.",
+        "thumbnailEntry": "https://media.discordapp.net/attachments/802200486781386832/859895326491148298/Icon.jpg",
+        "thumbnailBanner": "https://media.discordapp.net/attachments/802200486781386832/859892652530073620/Banner_2.jpg",
+        "requirements": [],
+        "active": false,
+        "visibility": "secret",
+        "deletedAt": null,
+        "rewards": [
+            {
+                "id": "08a4f10b-0d2b-4b96-8ea3-d38a3b76e775",
+                "type": "poap",
+                "name": "Slimes Invasion POAP",
+                "metadata": {},
+                "deletedAt": null,
+                "imageUrl": "https://media.discordapp.net/attachments/863521368422744116/874401804400603146/slimes2.png",
+                "flow": {
+                    "id": "bfb917d9-35f2-4fb9-bc2b-fb2f8848aff3",
+                    "type": "poap",
+                    "serverBaseUrl": null,
+                    "deletedAt": null,
+                    "campaingKey": null,
+                    "event": "5356"
+                }
+            }
+        ],
+        "creator": {
+            "id": "ff9676ba-77c6-407e-92f4-82e096832c35",
+            "address": null,
+            "username": "Nyc0las",
+            "admin": false,
+            "deletedAt": null
+        }
+    }
+]
