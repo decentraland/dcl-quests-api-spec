@@ -2,7 +2,7 @@
 
 API definition for the Decentraland Quests Server.  
 
-Check out the public API docs [here](https://decentraland.github.io/dcl-quests-api-specs/) 
+Check out the public API docs [here](https://decentraland.github.io/dcl-quests-api-spec/) 
 
 ## Working on the Catalyst API Definition
 

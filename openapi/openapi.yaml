@@ -24,5 +24,7 @@ paths:
     $ref: paths/status.yaml
   /creators/quests:
     $ref: paths/creators/creators@quests.yaml
+  /creators/quests/{queryId}:
+    $ref: paths/creators/creators@quests@{questId}.yaml
 
   
