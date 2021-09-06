@@ -1,5 +1,4 @@
-{
-    "$schema":"https://json-schema.org/draft/2020-12/schema",
+{    
     "title":"Quest",
     "description":"Quest object",
     "type":"object",
@@ -51,8 +50,8 @@
           "description":"By setting this flag to true when providing multiple task entries, you can simplify the payload so that the server automatically assigns each task’s \"previousTask\" attribute to the one task declared just before it.",
           "type":"boolean",
           "enum":[
-             "true",
-             "false"
+             true,
+             false
           ]
        },
        "rewards":{

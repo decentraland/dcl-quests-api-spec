@@ -1,5 +1,4 @@
-{
-    "$schema":"https://json-schema.org/draft/2020-12/schema",
+{    
     "title":"Task",
     "description":"Quest Task",
     "type":"object",
@@ -33,8 +32,8 @@
           "description":"When true, the quest can’t be considered finished until this task is completed.",
           "type":"boolean",
           "enum":[
-             "true",
-             "false"
+             true,
+             false
           ]
        },
        "validations":{

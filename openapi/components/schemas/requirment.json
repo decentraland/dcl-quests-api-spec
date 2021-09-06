@@ -1,5 +1,4 @@
-{
-    "$schema":"https://json-schema.org/draft/2020-12/schema",
+{    
     "title":"Requirment",
     "description":"Requirment object",
     "type":"object",
@@ -65,7 +64,7 @@
         {
             "properties": {
                 "type": {                    
-                    "description":"With the type 'completedTaskInAnyQuest' requires an specific Task to be completed in any of the previous instances of the same Quest.",
+                    "description":"With the type 'completedTaskInAnyQuest' Completed Task in the Any Quest: requires an specific Task to be completed in any of the previous instances of the same Quest.",
                     "const":"completedTaskInAnyQuest"    
                 },
                 "taskId": {

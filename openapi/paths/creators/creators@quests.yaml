@@ -37,11 +37,13 @@ post:
         schema:
           $ref: '../../components/schemas/quest.json'      
         example:
+          name: "Create Quest"
+          description: "Create basic quest"
           $ref: '../../components/examples/quests/POST-quest-body.json'
   responses:
     '200':
       description: Created Quest details 
       content:
         application/json:
-          example: 
+          example:             
             $ref: '../../components/examples/quests/200-POST-quest.json'
