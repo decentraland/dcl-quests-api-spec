@@ -22,3 +22,26 @@ get:
             type: object
           example:
             $ref: ../../components/examples/quests/200-quests.json
+post:
+  operationId: createQuest
+  summary: Create Quest
+  tags:
+    - Quests
+  description: >- 
+    Create a new Quest 
+  requestBody:
+    description: Optional description in *Markdown*
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/quest.json'      
+        example:
+          $ref: '../../components/examples/quests/POST-quest-body.json'
+  responses:
+    '200':
+      description: Created Quest details 
+      content:
+        application/json:
+          example: 
+            $ref: '../../components/examples/quests/200-POST-quest.json'
