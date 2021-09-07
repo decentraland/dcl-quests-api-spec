@@ -33,4 +33,9 @@ paths:
     $ref: paths/creators/creators@quests@{questId}.yaml
   /creators/quests/{questId}/tasks:
     $ref: paths/creators/creators@quests@{questId}@tasks.yaml
+  /creators/quests/{questId}/tasks/{taskId}:
+    $ref: paths/creators/creators@quests@{questId}@tasks@{taskId}.yaml
+  
+    
+
   
