@@ -11,6 +11,10 @@
           "description":"Name that appears in the quests menu and on the quest progress UI",
           "type":"string"
        },
+       "active":{
+         "description":"When true the Quest is active",
+         "type":"boolean"
+      },
        "description":{
           "description":"Description that appears in the quests menu, when opening the quest’s details",
           "type":"string"

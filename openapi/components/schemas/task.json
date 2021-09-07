@@ -13,15 +13,24 @@
        },
        "progressMode":{
           "description":"Modality of the task:  single | step-based | numeric",
-          "type":"string",
-          "enum":[
-             "single",
-             "step-based",
-             "numeric"
-          ]
+          "type":"object",
+          "properties" :{
+            "type":{
+                "type":"string",
+                "enum":[
+                    "single",
+                    "step-based",
+                    "numeric"
+                 ]
+            }
+          }          
        },
        "quest":{
-          "description":"IQuest",
+          "description":"TBD",
+          "type":"string"
+       },
+       "section":{
+          "description":"TBD",
           "type":"string"
        },
        "coordinates":{
