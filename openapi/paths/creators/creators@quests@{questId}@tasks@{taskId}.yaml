@@ -17,7 +17,7 @@ get:
   operationId: getTask
   summary: Get Task
   tags:
-    - Quests
+    - Quest Tasks
   description: >- 
     Retrieve the Task in the specified Quest with the specified taskId
   responses:
@@ -35,7 +35,7 @@ put:
   operationId: updateTask
   summary: Update Task
   tags:
-    - Quests
+    - Quest Tasks
   description: >- 
     Update the TaksId inside the QuestId with the request body object details
   requestBody: 
@@ -49,6 +49,8 @@ put:
           description: This is a task update          
           coordinates: 105,200
           required: false
+          progressMode: 
+            type: single
   responses:
     '200':
       description: Task Updatated
@@ -63,8 +65,8 @@ put:
 delete:
   operationId: deleteTask
   summary: Delete Task
-  tags:
-    - Quests
+  tags:    
+    - Quest Tasks
   description: >- 
     Delete the TaksId object inside the specified questId
   responses:

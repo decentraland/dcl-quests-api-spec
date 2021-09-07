@@ -10,7 +10,7 @@ post:
   operationId: createTask
   summary: Create Task
   tags:
-    - Quests
+    - Quest Tasks
   description: >- 
     Creates a Task using details provided in the request body object
   requestBody: 

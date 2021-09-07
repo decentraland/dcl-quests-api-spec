@@ -72,7 +72,10 @@
        },
        "steps":{
           "description":"The list of steps that make up the quest. These are only needed if the progressMode is step-based.",
-          "type":"array"
+          "type":"array",
+          "items": {
+            "$ref":"./step.json"
+          }
        }
     },
     "required":[

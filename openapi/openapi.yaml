@@ -12,11 +12,23 @@ info:
     and usually receive a reward for doing so.
 tags:
   - name: Quests
-    description: Quest API Descriptions
-  - name: User
-    description: Users API Description
-  - name: Rewards
-    description: Rewards API Description
+    description: >- 
+      Quests can be defined as sets of tasks that the player must complete in order to achieve an objective, and usually receive a reward for doing so.
+      They are defined by the content creators, either globally (they are visible in all parts of the world) or locally (they only appear in a certain scene).
+      Each player will be able to complete a Quest just once.
+      Quests may have an associated Reward. For this version, only POAP rewards will be available.
+
+  - name: Quest Tasks
+    description: >- 
+      Each Quest is composed of several tasks that need to be done in order to complete the Quest
+      Task requirements define the dependencies of the task to be available for the player to start working on it. Unless all the requirements of the task are met, the task won’t be displayed in any of the cards of the Quest Log, Quest Details, or Quest Tracker.
+      Tasks may be grouped into different sections inside the Quest. These sections will be defined by the Content Creator, and will provide context to a group of tasks (ie: Day 1, Day 2, etc)
+      Tasks may contain an initial location (x, y), where players can Jump In to start working on it. Teleport will use the closest spawn point to the location described in. the task to teleport the player, otherwise it will use the default spawn point of the scene
+      Tasks could contain individual steps needed to complete the task. 
+
+  - name: Task Steps
+    description: >- 
+      Each task may contain one or more steps. Each step can be triggered individually by the content creator to progress on the task, which will be checked by the server based on the validation rules.
 servers:
   - url: 'https://quests-api.decentraland.io'  
 components:
@@ -35,7 +47,10 @@ paths:
     $ref: paths/creators/creators@quests@{questId}@tasks.yaml
   /creators/quests/{questId}/tasks/{taskId}:
     $ref: paths/creators/creators@quests@{questId}@tasks@{taskId}.yaml
-  
+  /creators/quests/{questId}/tasks/{taskId}/steps:
+    $ref: paths/creators/creators@quests@{questId}@tasks@{taskId}@steps.yaml
+  /creators/quests/{questId}/tasks/{taskId}/steps/{stepId}:
+    $ref: paths/creators/creators@quests@{questId}@tasks@{taskId}@steps@{stepId}.yaml 
     
 
   
