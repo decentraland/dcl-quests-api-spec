@@ -22,6 +22,8 @@ get:
             type: object
           example:
             $ref: ../../components/examples/quests/200-questId.json
+    '401':
+      description: Unauthorized            
 put: 
   operationId: updateQuest
   summary: Update Quest
@@ -47,6 +49,8 @@ put:
             type: object
           example:
             $ref: ../../components/examples/quests/200-questId.json
+    '401':
+      description: Unauthorized    
 delete: 
   operationId: deleteQuest
   summary: Delete Quest
@@ -56,3 +60,5 @@ delete:
   responses:
     '200':
       description: Quests Deleted successfuly 
+    '401':
+      description: Unauthorized    
