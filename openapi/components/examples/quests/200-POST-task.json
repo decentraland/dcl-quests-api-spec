@@ -1,0 +1,16 @@
+{
+    "id": "7bfaa136-f4a8-4787-b9d1-16e36e63467e",
+    "description": "This is a task",
+    "coordinates": "100,100",
+    "required": true,
+    "section": "Easy",
+    "progressMode": {
+        "type": "single"
+    },
+    "requirements": [],
+    "validations": [],
+    "deletedAt": null,
+    "previousTask": null,
+    "rewards": [],
+    "steps": []
+}
