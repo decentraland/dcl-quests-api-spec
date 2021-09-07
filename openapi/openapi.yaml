@@ -29,6 +29,11 @@ tags:
   - name: Task Steps
     description: >- 
       Each task may contain one or more steps. Each step can be triggered individually by the content creator to progress on the task, which will be checked by the server based on the validation rules.
+    
+  - name: Rewards
+    description: >-
+      Each quest may have a reward associated with it. For this initial version, we will limit this functionality to a single POAP badge.
+      Each reward defines a “type” of reward that will be granted to each user that completes a particular quest. It describes its characteristics to be able to be shown to the user, but also has a “flow” that is used to decide how the user will claim that type of reward.      
 servers:
   - url: 'https://quests-api.decentraland.io'  
 components:
@@ -51,6 +56,9 @@ paths:
     $ref: paths/creators/creators@quests@{questId}@tasks@{taskId}@steps.yaml
   /creators/quests/{questId}/tasks/{taskId}/steps/{stepId}:
     $ref: paths/creators/creators@quests@{questId}@tasks@{taskId}@steps@{stepId}.yaml 
-    
+  /creators/rewards:
+    $ref: paths/creators/creators@rewards.yaml  
+  /creators/rewards/{id}:
+    $ref: paths/creators/creators@rewards@{id}.yaml  
 
   

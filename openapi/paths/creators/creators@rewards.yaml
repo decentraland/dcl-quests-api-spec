@@ -1,0 +1,47 @@
+get:
+  operationId: getRewards
+  summary: List of Rewards
+  tags:
+    - Rewards
+  description: >- 
+    Retrieves the list of existing Quests Rewards in the Server.  
+  responses:
+    '200':
+      description: List of Quests Rewards
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../../components/examples/rewards/200-GET-rewards.json
+post:
+  operationId: createReward
+  summary: Create Reward
+  tags:
+    - Rewards
+  description: >- 
+    Create a Reward for a Quest.  
+  requestBody: 
+    description: Reward Object
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/reward.json'      
+        example:          
+          type: poap
+          name: gods-test POAP                 
+          imageUrl: https://decentraland.org/images/poap/test-poap.png
+          flow:             
+            type: poap            
+            event: "5107"
+  responses:
+    '200':
+      description: Reward created object
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../../components/examples/rewards/200-POST-reward.json
+ 
