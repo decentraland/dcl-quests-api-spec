@@ -58,8 +58,8 @@ put:
         application/json; charset=utf-8:
           schema:
             type: object
-          example:
-            $ref: ../../components/examples/quests/200-PUT-task.json
+        example:
+          $ref: ../../components/examples/quests/200-PUT-Task.json
     '401':
       description: Unauthorized    
 delete:
