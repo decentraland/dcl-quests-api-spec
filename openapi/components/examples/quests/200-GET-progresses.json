@@ -1,0 +1,47 @@
+[
+    {
+        "id": "4dd3ba6d-677f-49d9-b296-d8f70d36acf9",
+        "address": "0xa2cec221294e6d65cdc83faf8767cdb2af6299bc",
+        "createdDate": "2021-09-07T14:02:46.095Z",
+        "status": "on_going",
+        "arbitraryState": {},
+        "quest": {
+            "id": "4e72efcb-4f92-4eed-ad6b-ec683d42bd76",
+            "name": "Portal puzzle reloaded",
+            "description": "A super tough puzzle thing",
+            "thumbnailEntry": "https://github.com/decentraland-scenes/Block-dog/blob/master/screenshot/screenshot.png?raw=true",
+            "thumbnailBanner": "https://github.com/decentraland-scenes/Block-dog/blob/master/screenshot/screenshot.png?raw=true",
+            "requirements": [],
+            "active": true,
+            "visibility": "visible",
+            "deletedAt": null,
+            "rewards": [
+                {
+                    "id": "1addb24b-64ab-4632-bab1-b91905baab53",
+                    "type": "poap",
+                    "name": "mypoap",
+                    "metadata": {},
+                    "deletedAt": null,
+                    "imageUrl": "https://storage.googleapis.com/poapmedia/decentraland-1st-anniversary-party-2021-logo-1613742619448.png",
+                    "flow": {
+                        "id": "12768e40-d541-4cfe-9b97-c12916d522e6",
+                        "type": "poap",
+                        "serverBaseUrl": null,
+                        "deletedAt": null,
+                        "campaingKey": null,
+                        "event": "wtfrnfts1"
+                    }
+                }
+            ],
+            "creator": {
+                "id": "970ab217-b23f-438d-b837-aeff5a986a32",
+                "address": null,
+                "username": "pentreathm",
+                "admin": true,
+                "deletedAt": null
+            }
+        },
+        "givenRewards": [],
+        "taskProgresses": []
+    }
+]

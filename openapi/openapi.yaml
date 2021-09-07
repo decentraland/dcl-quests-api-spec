@@ -29,11 +29,16 @@ tags:
   - name: Task Steps
     description: >- 
       Each task may contain one or more steps. Each step can be triggered individually by the content creator to progress on the task, which will be checked by the server based on the validation rules.
-    
+
   - name: Rewards
     description: >-
       Each quest may have a reward associated with it. For this initial version, we will limit this functionality to a single POAP badge.
       Each reward defines a “type” of reward that will be granted to each user that completes a particular quest. It describes its characteristics to be able to be shown to the user, but also has a “flow” that is used to decide how the user will claim that type of reward.      
+
+  - name: Quest Progress   
+    description: >- 
+      These set of endpoints are used to check the users progress on a Quest
+
 servers:
   - url: 'https://quests-api.decentraland.io'  
 components:
@@ -60,5 +65,15 @@ paths:
     $ref: paths/creators/creators@rewards.yaml  
   /creators/rewards/{id}:
     $ref: paths/creators/creators@rewards@{id}.yaml  
-
+  /creators/quests/{questId}/progresses:
+    $ref: paths/creators/creators@quests@{questId}@progresses.yaml
+  /creators/quests/{questId}/progresses/{address}:
+    $ref: paths/creators/creators@quests@{questId}@progresses@{address}.yaml
+  /creators/quests/{questId}/progresses/{address}/{progressId}:
+    $ref: paths/creators/creators@quests@{questId}@progresses@{address}@{progressId}.yaml
+  /creators/quests/{questId}/progresses/{address}/revert:
+    $ref: paths/creators/creators@quests@{questId}@progresses@{address}@revert.yaml
+  /creators/quests/{questId}/progresses/{address}/revert/{progressId}:
+    $ref: paths/creators/creators@quests@{questId}@progresses@{address}@revert@{progressId}.yaml
+      
   

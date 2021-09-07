@@ -1,0 +1,34 @@
+parameters:
+    - in: path 
+      name: questId
+      schema:
+        type: string
+        example: 4e72efcb-4f92-4eed-ad6b-ec683d42bd76
+      description: >- 
+        Quest unique Identifier
+    - in: path 
+      name: address
+      schema:
+        type: string
+        example: "0xc3c9d87725b7bd595f8dc73b6df599ff7f9a4e53"
+      description: >- 
+        Ethereum address of the User performing the Quest
+    - in: path 
+      name: progressId
+      schema:
+        type: string
+        example: 86925625-04d3-470d-af66-561fa50d367e
+      description: >- 
+        Id of the progress record
+post:
+  operationId: revertProgressWithId
+  summary: Revert Progress
+  tags:
+    - Quest Progress
+  description: >- 
+    Revert the progress with the progressId done by the specified user in the Quest  
+  responses:
+    '200':
+      description: Progress record reverted
+    '401':
+      description: Unauthorized            
