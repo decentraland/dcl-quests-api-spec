@@ -14,7 +14,7 @@
                 "type":"object",
                 "properties":{
                    "type":{
-                      "description":"TBD: distanceToPoints",
+                      "description":"Validations can also be the same as requirements. The difference between validations and requirements is that validations are secret, and requirements are not.",
                       "type":"string"
                    }
                 }                

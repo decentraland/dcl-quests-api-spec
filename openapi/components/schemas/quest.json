@@ -31,7 +31,7 @@
           "description":"Conditions that must be met by the player before the quest can be started ",
           "type":"array",
           "items":{
-            "$ref":"./requirment.json"
+            "$ref":"./requirement.json"
           }
        },
        "visibility":{

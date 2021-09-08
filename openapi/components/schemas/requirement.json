@@ -1,6 +1,6 @@
 {    
-    "title":"Requirment",
-    "description":"Requirment object",
+    "title":"Requirement",
+    "description":"Requirement object",
     "type":"object",
     "anyOf": [
         {
