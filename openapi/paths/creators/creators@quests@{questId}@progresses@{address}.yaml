@@ -1,0 +1,34 @@
+parameters:
+    - in: path 
+      name: questId
+      schema:
+        type: string
+        example: 4e72efcb-4f92-4eed-ad6b-ec683d42bd76
+      description: >- 
+        Quest unique Identifier
+    - in: path 
+      name: address
+      schema:
+        type: string
+        example: "0xc3c9d87725b7bd595f8dc73b6df599ff7f9a4e53"
+      description: >- 
+        Ethereum address of the User performing the Quest
+get:
+  operationId: getUserProgresses
+  summary: Get User Progress
+  tags:
+    - Quest Progress
+  description: >- 
+    Get the progress of a specified user in the Quest
+  responses:
+    '200':
+      description: List of user progresses
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../../components/examples/quests/200-GET-progresses-address.json
+    '401':
+      description: Unauthorized           
+                

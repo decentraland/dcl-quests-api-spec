@@ -1,0 +1,28 @@
+{    
+    "title":"Step",
+    "description":"Step object",
+    "type":"object",
+    "properties":{
+       "id":{
+          "description":"String to identify the step.",
+          "type":"string"
+       },
+       "validations":{
+            "description":"List of progress validation rules to determine that the step is completed",
+            "type":"array",
+            "items":{
+                "type":"object",
+                "properties":{
+                   "type":{
+                      "description":"Validations can also be the same as requirements. The difference between validations and requirements is that validations are secret, and requirements are not.",
+                      "type":"string"
+                   }
+                }                
+            }   
+        },
+        "description":{
+            "description":"Step description",
+            "type":"string"
+        }        
+    }
+}

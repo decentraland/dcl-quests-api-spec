@@ -1,0 +1,79 @@
+{    
+    "title":"Quest",
+    "description":"Quest object",
+    "type":"object",
+    "properties":{
+       "id":{
+          "description":"String to identify the quest. This string is used by the scene to reference the quest. If no id is provided, the server will generate one.",
+          "type":"string"
+       },
+       "name":{
+          "description":"Name that appears in the quests menu and on the quest progress UI",
+          "type":"string"
+       },
+       "active":{
+         "description":"When true the Quest is active",
+         "type":"boolean"
+      },
+       "description":{
+          "description":"Description that appears in the quests menu, when opening the quest’s details",
+          "type":"string"
+       },
+       "thumbnailEntry":{
+          "description":"String with a URL to an image to display in the quest menu and the quest progress UI. The image should be 122x122 pixels. Make sure you host this image in a location that has a CORS configuration that allows showing the content in Decentraland.",
+          "type":"string"
+       },
+       "thumbnailBanner":{
+          "description":" String with a URL to an image to display in the quest menu, when opening the quest’s details. The image should be 390x170 pixels. Make sure you host this image in a location that has a CORS configuration that allows showing the content in Decentraland",
+          "type":"string"
+       },
+       "requirements":{
+          "description":"Conditions that must be met by the player before the quest can be started ",
+          "type":"array",
+          "items":{
+            "$ref":"./requirement.json"
+          }
+       },
+       "visibility":{
+          "description":"If visible, the quest can be found in the quests menu. “visible_if_can_start” makes the quest only visible if the player meets the requirements to start it. “secret” only makes the quest visible in the quests menu once the player started the quest, by interacting with a scene that gives the instruction to start.",
+          "type":"string",
+          "enum":[
+             "visible",
+             "visible_if_can_start",
+             "secret"
+          ]
+       },
+       "tasks":{
+          "description":"The list of tasks that make up the quest.",
+          "type":"array",
+          "items":{
+             "$ref":"./task.json"
+          }
+       },
+       "orderedTasks":{
+          "description":"By setting this flag to true when providing multiple task entries, you can simplify the payload so that the server automatically assigns each task’s \"previousTask\" attribute to the one task declared just before it.",
+          "type":"boolean",
+          "enum":[
+             true,
+             false
+          ]
+       },
+       "rewards":{
+          "description":"The IDs of any rewards to associate to completing all of the tasks in the quest. Use the rewards endpoint first to create a reward, then use this field to assign an already created reward.",
+          "type":"array",
+          "items":{
+             "type":"object",
+             "properties":{
+                "id":{
+                   "description":"ID of the Reward",
+                   "type":"string"
+                }
+             }
+          }
+       }
+    },
+    "required":[
+       "name",
+       "description"
+    ]
+ }

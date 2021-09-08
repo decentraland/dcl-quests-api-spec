@@ -1,0 +1,45 @@
+{   
+    "title":"Reward",
+    "description":"Reward",
+    "type":"object",
+    "properties":{
+        "id":{
+            "description":"When generating a reward, you don’t need to pass an id, the server will assign one automatically. You then need to use this ID when referencing the reward on the quest json.",
+            "type":"string"
+         },
+         "type":{
+            "description":"Currently, the only supported type of reward is ‘poap’. In the future, this field will allow to specify other types.",
+            "type":"string",
+            "enum":[
+                "poap"
+            ]
+         },
+         "name":{
+            "description":"This name shown on-screen when the player obtains the reward. This name should be human-readable and self explanatory to a player completing the quest.",
+            "type":"string"
+         },
+         "imageUrl":{
+            "description":"A URL pointing to an image to be displayed when the player earns this reward. The image should be representative of the reward obtained. If no image is provided, no notification is shown when the user earns the reward. Make sure you host this image in a location that has a CORS configuration that allows showing the content in Decentraland",
+            "type":"string"
+         }, 
+         "flow":{
+             "description":"Define the details of how the reward is given.",
+             "type":"object",
+             "properties":{
+                 "type": {
+                     "description":" Currently, the only supported type of reward is ‘poap’. In the future, this field will allow to specify other types.",
+                     "type":"string",
+                     "enum":[
+                         "poap"
+                     ]
+                 },
+                 "event":{
+                    "description":"For POAP rewards, this string should match the 4 number id provided by poap.xyz when creating the event on their platform.",
+                    "type":"string"
+                 }
+             }
+
+         }
+
+    }
+}

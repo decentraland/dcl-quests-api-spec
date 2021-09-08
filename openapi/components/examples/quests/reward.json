@@ -1,0 +1,16 @@
+{
+    "id": "1addb24b-64ab-4632-bab1-b91905baab53",
+    "type": "poap",
+    "name": "mypoap",
+    "metadata": {},
+    "deletedAt": null,
+    "imageUrl": "https://storage.googleapis.com/poapmedia/decentraland-1st-anniversary-party-2021-logo-1613742619448.png",
+    "flow": {
+        "id": "12768e40-d541-4cfe-9b97-c12916d522e6",
+        "type": "poap",
+        "serverBaseUrl": null,
+        "deletedAt": null,
+        "campaingKey": null,
+        "event": "wtfrnfts1"
+    }
+}

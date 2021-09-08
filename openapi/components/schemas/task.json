@@ -1,0 +1,86 @@
+{    
+    "title":"Task",
+    "description":"Quest Task",
+    "type":"object",
+    "properties":{
+       "id":{
+          "description":"String to identify the task. This string is used by the scene when updating a task’s status. If no id is provided, the server will generate one.",
+          "type":"string"
+       },
+       "description":{
+          "description":"Label for the task that appears in the quest progress UI and the quest details",
+          "type":"string"
+       },
+       "progressMode":{
+          "description":"Modality of the task:  single | step-based | numeric",
+          "type":"object",
+          "properties" :{
+            "type":{
+                "type":"string",
+                "enum":[
+                    "single",
+                    "step-based",
+                    "numeric"
+                 ]
+            }
+          }          
+       },
+       "quest":{
+          "description":"TBD",
+          "type":"string"
+       },
+       "section":{
+          "description":"TBD",
+          "type":"string"
+       },
+       "coordinates":{
+          "description":"Coordinates of the parcel on the Decentraland map where this task is carried out. When coordinates are present, the task has a “Jump in” button on the quest progress UI. This button teleports players to those coordinates.",
+          "type":"string"
+       },
+       "required":{
+          "description":"When true, the quest can’t be considered finished until this task is completed.",
+          "type":"boolean",
+          "enum":[
+             true,
+             false
+          ]
+       },
+       "validations":{
+          "description":"Any progress updates to this task must comply with these validations.",
+          "type":"array"
+       },
+       "requirements":{
+          "description":"Conditions that must be met by the player before the task is displayed on the UI and can be completed. Only tasks that currently  have their requirements met are visible.",
+          "type":"array"
+       },
+       "previousTask":{
+          "description":"The ID of the task that must be completed immediately before this task can be done, as long as this task has a “completedPrevious” validation.",
+          "type":"string"
+       },
+       "rewards":{
+          "description":"Conditions that must be met by the player before the task is displayed on the UI and can be completed. Only tasks that currently  have their requirements met are visible.",
+          "type":"array",
+          "items":{
+             "type":"object",
+             "properties":{
+                "id":{
+                   "description":"ID of the Reward",
+                   "type":"string"
+                }
+             }
+          }
+       },
+       "steps":{
+          "description":"The list of steps that make up the quest. These are only needed if the progressMode is step-based.",
+          "type":"array",
+          "items": {
+            "$ref":"./step.json"
+          }
+       }
+    },
+    "required":[
+       "description",
+       "progressMode",
+       "required"
+    ]
+ }

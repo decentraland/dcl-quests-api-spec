@@ -1,0 +1,10 @@
+{ 
+    "id": "1ebb22a0-186f-4215-b39e-64fb31936dd7",
+    "description": "Pick up gun",
+    "coordinates": "-133,-40",
+    "required": true,
+    "section": "Easy",
+    "progressMode": {
+        "type": "single"
+    }
+}

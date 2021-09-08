@@ -1,0 +1,16 @@
+{
+    "id": "f9ffe332-3d13-4034-8fca-d1b069065bde",
+    "type": "poap",
+    "name": "This is a Reward update",
+    "metadata": {},
+    "deletedAt": null,
+    "imageUrl": "https://decentraland.org/images/poap/test-poap.png",
+    "flow": {
+        "id": "631d8eb3-d67d-4bbc-b21e-24cc179554ce",
+        "type": "poap",
+        "serverBaseUrl": null,
+        "deletedAt": null,
+        "campaingKey": null,
+        "event": "5107"
+    }
+}

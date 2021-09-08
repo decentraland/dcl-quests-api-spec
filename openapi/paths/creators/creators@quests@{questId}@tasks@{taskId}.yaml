@@ -1,0 +1,76 @@
+parameters:
+    - in: path 
+      name: questId
+      schema:
+        type: string
+        example: 4e72efcb-4f92-4eed-ad6b-ec683d42bd76
+      description: >- 
+        Quest unique Identifier
+    - in: path 
+      name: taskId
+      schema:
+        type: string
+        example: 5764f247-2c30-41f4-9aca-c8ff2663810e
+      description: >- 
+        Task unique Identifier
+get:
+  operationId: getTask
+  summary: Get Task
+  tags:
+    - Quest Tasks
+  description: >- 
+    Retrieve the Task in the specified Quest with the specified taskId
+  responses:
+    '200':
+      description: Task Object
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../../components/examples/quests/200-GET-Task.json
+    '401':
+      description: Unauthorized                
+put: 
+  operationId: updateTask
+  summary: Update Task
+  tags:
+    - Quest Tasks
+  description: >- 
+    Update the TaksId inside the QuestId with the request body object details
+  requestBody: 
+    description: Task Object
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/task.json'      
+        example:          
+          description: This is a task update          
+          coordinates: 105,200
+          required: false
+          progressMode: 
+            type: single
+  responses:
+    '200':
+      description: Task Updatated
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+        example:
+          $ref: ../../components/examples/quests/200-PUT-Task.json
+    '401':
+      description: Unauthorized    
+delete:
+  operationId: deleteTask
+  summary: Delete Task
+  tags:    
+    - Quest Tasks
+  description: >- 
+    Delete the TaksId object inside the specified questId
+  responses:
+    '200':
+      description: Deleted task      
+    '401':
+      description: Unauthorized    

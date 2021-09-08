@@ -1,0 +1,65 @@
+parameters:
+    - in: path 
+      name: id
+      schema:
+        type: string
+        example: f9ffe332-3d13-4034-8fca-d1b069065bde
+      description: >- 
+        Reward unique Identifier
+get:
+  operationId: getReward
+  summary: Get Reward
+  tags:
+    - Rewards
+  description: >- 
+    Gets details of a reward
+  responses:
+    '200':
+      description: Reward Object
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../../components/examples/rewards/200-GET-reward.json
+    '401':
+      description: Unauthorized                
+put: 
+  operationId: updateReward
+  summary: Update Reward
+  tags:
+    - Rewards
+  description: >- 
+    Updates a Reward using the request payload
+  requestBody: 
+    description: Reward Object
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/reward.json'      
+        example:          
+          name: This is a Reward update                    
+  responses:
+    '200':
+      description: Task Updatated
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../../components/examples/rewards/200-PUT-reward.json
+    '401':
+      description: Unauthorized    
+delete:
+  operationId: deleteReward
+  summary: Delete Reward
+  tags:    
+    - Rewards
+  description: >- 
+    Delete the Reward with the specified rewardId from the Server
+  responses:
+    '200':
+      description: Deleted reward      
+    '401':
+      description: Unauthorized    

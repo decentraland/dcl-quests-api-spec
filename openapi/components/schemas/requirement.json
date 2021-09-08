@@ -1,0 +1,83 @@
+{    
+    "title":"Requirement",
+    "description":"Requirement object",
+    "type":"object",
+    "anyOf": [
+        {
+            "properties" : {
+                "type": {                    
+                    "description":"With type 'date' it requires to be in an specific timeframe to reveal the Task",
+                    "const":"date"    
+                },
+                "fromDate": {
+                    "description":"Timestamp with the begining of the timeframe",
+                    "type":"string"       
+                },
+                "toDate": {
+                    "description":"Timestamp with the end of the timeframe",
+                    "type":"string"       
+                }
+            },
+            "required": [
+                "fromDate",
+                "toDate"
+            ]
+        },
+        {
+            "properties" : {
+                "type": {                    
+                    "description":"With type 'completedQuest' requires a Quest with the specified ID to be completed.",
+                    "const":"completedQuest"    
+                },
+                "questId": {
+                    "description":"ID of the quest that must be completed",
+                    "type":"string"       
+                }
+            },
+            "required" : [
+                "questId"
+            ]
+        }, 
+        {
+            "properties": {
+                "type": {                    
+                    "description":"With type 'completedPrevious' requires the Task defined on the “previousTask” parameter to be completed. This requirement can only be applied to Tasks.",
+                    "const":"completedPrevious"    
+                }
+            }
+        },
+        {
+            "properties": {
+                "type": {                    
+                    "description":"With type 'completedTaskInCurrentQuest' requires a Task with the specified ID of the current Quest to be completed.",
+                    "const":"completedTaskInCurrentQuest"    
+                },
+                "taskId": {
+                    "description":"ID of the task that must be completed",
+                    "type":"string"       
+                }
+            },
+            "required":[                
+                "taskId"
+            ]
+        },
+        {
+            "properties": {
+                "type": {                    
+                    "description":"With the type 'completedTaskInAnyQuest' Completed Task in the Any Quest: requires an specific Task to be completed in any of the previous instances of the same Quest.",
+                    "const":"completedTaskInAnyQuest"    
+                },
+                "taskId": {
+                    "description":"ID of the task that must be completed",
+                    "type":"string"       
+                }
+            },
+            "required":[                
+                "taskId"
+            ]
+        }    
+    ],
+    "required":[ 
+        "type"
+    ]
+}

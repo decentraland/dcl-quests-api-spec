@@ -1,0 +1,16 @@
+{
+    "id": "5764f247-2c30-41f4-9aca-c8ff2663810e",
+    "description": "This is a task update",
+    "coordinates": "150,100",
+    "required": true,
+    "section": "Easy",
+    "progressMode": {
+        "type": "single"
+    },
+    "requirements": [],
+    "validations": [],
+    "deletedAt": null,
+    "previousTask": null,
+    "rewards": [],
+    "steps": []
+}

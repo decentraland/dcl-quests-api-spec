@@ -1,0 +1,25 @@
+{
+    "id": "0319fd6b-2f2b-448e-86ac-468969d98962",
+    "description": "Chase away 15 moles in Xcopy",
+    "coordinates": "2,45",
+    "required": true,
+    "section": null,
+    "progressMode": {
+        "type": "numeric",
+        "start": 0,
+        "end": 15,
+        "direction": "up",
+        "unit": "mole"
+    },
+    "requirements": [
+        {
+            "type": "completedTaskInCurrentQuest",
+            "taskId": "5635e03b-6b9b-4464-996b-a866efb62d8c"
+        }
+    ],
+    "validations": [],
+    "deletedAt": null,
+    "previousTask": null,
+    "rewards": [],
+    "steps": []
+}

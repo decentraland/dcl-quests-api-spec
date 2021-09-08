@@ -1,0 +1,40 @@
+parameters:
+    - in: path 
+      name: questId
+      schema:
+        type: string
+        example: 4e72efcb-4f92-4eed-ad6b-ec683d42bd76
+      description: >- 
+        Quest unique Identifier
+post: 
+  operationId: createTask
+  summary: Create Task
+  tags:
+    - Quest Tasks
+  description: >- 
+    Creates a Task using details provided in the request body object
+  requestBody: 
+    description: Task Object
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/task.json'      
+        example:          
+          description: This is a task 
+          section: Easy
+          progressMode: 
+            type: single
+          coordinates: 100,150
+          required: true
+  responses:
+    '200':
+      description: Task Created
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../../components/examples/quests/200-POST-task.json
+    '401':
+      description: Unauthorized    

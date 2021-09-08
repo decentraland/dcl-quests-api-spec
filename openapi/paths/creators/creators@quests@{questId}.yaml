@@ -1,11 +1,4 @@
-get:
-  operationId: getQuest
-  summary: Get Quest with the specified questId
-  tags:
-    - Quests
-  description: >- 
-    Retrieves the Quest with the specified questId
-  parameters:
+parameters:
     - in: path 
       name: questId
       schema:
@@ -13,6 +6,13 @@ get:
         example: 4e72efcb-4f92-4eed-ad6b-ec683d42bd76
       description: >- 
         Quest unique Identifier
+get:
+  operationId: getQuest
+  summary: Get Quest
+  tags:
+    - Quests
+  description: >- 
+    Retrieves the Quest with the specified questId  
   responses:
     '200':
       description: Quests object
@@ -22,3 +22,43 @@ get:
             type: object
           example:
             $ref: ../../components/examples/quests/200-questId.json
+    '401':
+      description: Unauthorized            
+put: 
+  operationId: updateQuest
+  summary: Update Quest
+  tags:
+    - Quests
+  description: Updates a Quest using the request payload. 
+  requestBody: 
+    description: Quest Object
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/quest.json'      
+        example:
+          name: "Updated Quest Name"
+          description: "New quest description"          
+  responses:
+    '200':
+      description: Updated Quests object
+      content:
+        application/json; charset=utf-8:
+          schema:
+            type: object
+          example:
+            $ref: ../../components/examples/quests/200-questId.json
+    '401':
+      description: Unauthorized    
+delete: 
+  operationId: deleteQuest
+  summary: Delete Quest
+  tags:
+    - Quests
+  description: Delete Quest with the specified questId
+  responses:
+    '200':
+      description: Quests Deleted successfuly 
+    '401':
+      description: Unauthorized    

@@ -1,0 +1,20 @@
+{
+    "id": "b46684f1-3278-4f43-8285-e0eff6192739",
+    "name": "quest-tests",
+    "description": "this is a tests quest",
+    "thumbnailEntry": "https://assets.coingecko.com/coins/images/878/large/decentraland-mana.png?1550108745",
+    "thumbnailBanner": "https://assets.coingecko.com/coins/images/878/large/decentraland-mana.png?1550108745",
+    "requirements": [],
+    "active": false,
+    "visibility": "secret",
+    "deletedAt": null,
+    "tasks": [],
+    "rewards": [],
+    "creator": {
+        "id": "970ab217-b23f-438d-b837-aeff5a986a32",
+        "address": null,
+        "username": "pentreathm",
+        "admin": true,
+        "deletedAt": null
+    }
+}

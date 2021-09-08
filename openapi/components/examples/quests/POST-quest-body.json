@@ -1,0 +1,9 @@
+{   
+    "name": "quest-tests",
+    "active": false,
+    "description": "this is a tests quest",
+    "thumbnailEntry": "https://assets.coingecko.com/coins/images/878/large/decentraland-mana.png?1550108745",
+    "thumbnailBanner": "https://assets.coingecko.com/coins/images/878/large/decentraland-mana.png?1550108745",
+    "visibility": "secret",    
+    "orderedTasks": false
+}
