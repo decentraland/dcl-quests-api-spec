@@ -1,0 +1,70 @@
+[
+    {
+        "visibility": "visible",
+        "tasks": [
+            {
+                "progressSummary": {
+                    "direction": "up",
+                    "current": 5,
+                    "unit": "veniam",
+                    "end": 10,
+                    "start": 1
+                },
+                "rewards": [
+                    {
+                        "id": "elit velit officia sint",
+                        "name": "esse",
+                        "type": "mana"
+                    },
+                    {
+                        "id": "quis do occaecat",
+                        "type": "poap",
+                        "name": "aliquip laboris in dolor dolore",
+                        "imageUrl": "dolor sint nulla sit"
+                    }
+                ]
+            }
+        ],
+        "thumbnailBanner": "voluptate ex officia est nulla",
+        "givenRewards": [
+            {
+                "date": "1987-09-08T03:00:00.0Z",
+                "claimData": {
+                    "voluptateef": 74986325,
+                    "aliquip3": true,
+                    "laboris5": "velit exercitation anim cillum"
+                }
+            }
+        ],
+        "id": "adipisicing nulla",
+        "active": false,
+        "thumbnailEntry": "Ut elit in aliquip",
+        "rewards": [
+            {
+                "imageUrl": "sit esse dolor deserunt",
+                "id": "laborum",
+                "name": "voluptate Excepteur",
+                "type": "other"
+            },
+            {
+                "name": "non tempor",
+                "type": "wearable",
+                "id": "in ullamco",
+                "imageUrl": "aliquip consectetur magna minim"
+            },
+            {
+                "name": "commodo ipsum",
+                "type": "other",
+                "imageUrl": "ea nisi ex"
+            },
+            {
+                "id": "exercitation",
+                "type": "wearable",
+                "name": "reprehenderit qui ad magna id",
+                "imageUrl": "Lorem Ut"
+            }
+        ],
+        "progressPercentage": 80,
+        "lastProgressDate": "1993-04-09T03:00:00.0Z"
+    }
+]

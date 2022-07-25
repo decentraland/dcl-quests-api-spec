@@ -1,0 +1,20 @@
+{
+    "properties": {
+        "current": {
+            "type": "number"
+        },
+        "direction": {
+            "$ref": "./progress-direction.json"
+        },
+        "end": {
+            "type": "number"
+        },
+        "start": {
+            "type": "number"
+        },
+        "unit": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}

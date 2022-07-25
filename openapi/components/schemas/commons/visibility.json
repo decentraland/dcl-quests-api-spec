@@ -1,0 +1,9 @@
+{
+    "description": "If visible, the quest can be found in the quests menu. “visible_if_can_start” makes the quest only visible if the player meets the requirements to start it. “secret” only makes the quest visible in the quests menu once the player started the quest, by interacting with a scene that gives the instruction to start.",
+    "type": "string",
+    "enum": [
+        "visible",
+        "visible_if_can_start",
+        "secret"
+    ]
+}

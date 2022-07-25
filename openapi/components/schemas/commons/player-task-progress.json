@@ -1,0 +1,256 @@
+{
+    "properties": {
+        "date": {
+            "format": "date-time",
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "progressData": {
+            "anyOf": [
+                {
+                    "allOf": [
+                        {
+                            "properties": {
+                                "status": {
+                                    "$ref": "./progress-status.json"
+                                },
+                                "type": {
+                                    "enum": [
+                                        "single"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "arbitraryStateChanges": {
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "properties": {
+                                                    "set": {
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            {
+                                                "properties": {
+                                                    "unset": {
+                                                        "items": {
+                                                            "type": "string"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        ]
+                                    },
+                                    "type": "array"
+                                },
+                                "challenge": {},
+                                "current": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                },
+                {
+                    "allOf": [
+                        {
+                            "properties": {
+                                "type": {
+                                    "enum": [
+                                        "numeric"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "arbitraryStateChanges": {
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "properties": {
+                                                    "set": {
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            {
+                                                "properties": {
+                                                    "unset": {
+                                                        "items": {
+                                                            "type": "string"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        ]
+                                    },
+                                    "type": "array"
+                                },
+                                "challenge": {},
+                                "current": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "amount": {
+                                    "type": "number"
+                                },
+                                "operation": {
+                                    "enum": [
+                                        "decrease",
+                                        "increase",
+                                        "set"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                },
+                {
+                    "allOf": [
+                        {
+                            "properties": {
+                                "type": {
+                                    "enum": [
+                                        "numeric"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "arbitraryStateChanges": {
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "properties": {
+                                                    "set": {
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            {
+                                                "properties": {
+                                                    "unset": {
+                                                        "items": {
+                                                            "type": "string"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        ]
+                                    },
+                                    "type": "array"
+                                },
+                                "challenge": {},
+                                "current": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "operation": {
+                                    "enum": [
+                                        "reset"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                },
+                {
+                    "allOf": [
+                        {
+                            "properties": {
+                                "stepId": {
+                                    "type": "string"
+                                },
+                                "stepStatus": {
+                                    "$ref": "./progress-status.json"
+                                },
+                                "type": {
+                                    "enum": [
+                                        "step-based"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "arbitraryStateChanges": {
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "properties": {
+                                                    "set": {
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            {
+                                                "properties": {
+                                                    "unset": {
+                                                        "items": {
+                                                            "type": "string"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        ]
+                                    },
+                                    "type": "array"
+                                },
+                                "challenge": {},
+                                "current": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                }
+            ]
+        },
+        "status": {
+            "$ref": "./progress-status.json"
+        },
+        "step": {}
+    },
+    "type": "object"
+}

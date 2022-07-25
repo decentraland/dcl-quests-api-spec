@@ -1,0 +1,14 @@
+{
+    "description": "Modality of the task:  single | step-based | numeric",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": [
+                "single",
+                "step-based",
+                "numeric"
+            ]
+        }
+    }
+}

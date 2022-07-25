@@ -1,0 +1,11 @@
+{
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "progressStatus": {
+            "$ref": "./progress-status.json"
+        }
+    },
+    "type": "object"
+}

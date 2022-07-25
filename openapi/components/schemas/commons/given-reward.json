@@ -1,0 +1,29 @@
+{
+    "title": "Given Reward",
+    "description": "Reward given to a player",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "reward": {
+            "$ref": "./reward.json"
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "ok",
+                "already_given",
+                "task_already_completed",
+                "failed"
+            ]
+        },
+        "date": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "claimData": {
+            "type": "object"
+        }
+    }
+}

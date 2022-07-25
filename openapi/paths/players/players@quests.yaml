@@ -1,0 +1,23 @@
+get:
+  operationId: getActiveQuests
+  summary: List of active Quests for the given user address
+  tags:
+    - Quests
+  description: >-
+    Retrieves the list of active Quests in the Server for the given address
+  parameters:
+    - in: query
+      name: address
+      schema:
+        type: string
+      description: >-
+        The user address
+  responses:
+    "200":
+      description: State list of active Quests
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../../components/schemas/commons/quest-state.json
+        example:
+          $ref: ../../components/examples/quests/200-quests.json

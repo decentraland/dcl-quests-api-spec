@@ -3,10 +3,10 @@ get:
   summary: List of Rewards
   tags:
     - Rewards
-  description: >- 
-    Retrieves the list of existing Quests Rewards in the Server.  
+  description: >-
+    Retrieves the list of existing Quests Rewards in the Server.
   responses:
-    '200':
+    "200":
       description: List of Quests Rewards
       content:
         application/json; charset=utf-8:
@@ -19,24 +19,24 @@ post:
   summary: Create Reward
   tags:
     - Rewards
-  description: >- 
-    Create a Reward for a Quest.  
-  requestBody: 
+  description: >-
+    Create a Reward for a Quest.
+  requestBody:
     description: Reward Object
     required: true
     content:
       application/json:
         schema:
-          $ref: '../../components/schemas/reward.json'      
-        example:          
+          $ref: "../../components/schemas/creators/reward.json"
+        example:
           type: poap
-          name: gods-test POAP                 
+          name: gods-test POAP
           imageUrl: https://decentraland.org/images/poap/test-poap.png
-          flow:             
-            type: poap            
+          flow:
+            type: poap
             event: "5107"
   responses:
-    '200':
+    "200":
       description: Reward created object
       content:
         application/json; charset=utf-8:
@@ -44,4 +44,3 @@ post:
             type: object
           example:
             $ref: ../../components/examples/rewards/200-POST-reward.json
- 

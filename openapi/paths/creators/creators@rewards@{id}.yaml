@@ -1,20 +1,20 @@
 parameters:
-    - in: path 
-      name: id
-      schema:
-        type: string
-        example: f9ffe332-3d13-4034-8fca-d1b069065bde
-      description: >- 
-        Reward unique Identifier
+  - in: path
+    name: id
+    schema:
+      type: string
+      example: f9ffe332-3d13-4034-8fca-d1b069065bde
+    description: >-
+      Reward unique Identifier
 get:
   operationId: getReward
   summary: Get Reward
   tags:
     - Rewards
-  description: >- 
+  description: >-
     Gets details of a reward
   responses:
-    '200':
+    "200":
       description: Reward Object
       content:
         application/json; charset=utf-8:
@@ -22,26 +22,26 @@ get:
             type: object
           example:
             $ref: ../../components/examples/rewards/200-GET-reward.json
-    '401':
-      description: Unauthorized                
-put: 
+    "401":
+      description: Unauthorized
+put:
   operationId: updateReward
   summary: Update Reward
   tags:
     - Rewards
-  description: >- 
+  description: >-
     Updates a Reward using the request payload
-  requestBody: 
+  requestBody:
     description: Reward Object
     required: true
     content:
       application/json:
         schema:
-          $ref: '../../components/schemas/reward.json'      
-        example:          
-          name: This is a Reward update                    
+          $ref: "../../components/schemas/creators/reward.json"
+        example:
+          name: This is a Reward update
   responses:
-    '200':
+    "200":
       description: Task Updatated
       content:
         application/json; charset=utf-8:
@@ -49,17 +49,17 @@ put:
             type: object
           example:
             $ref: ../../components/examples/rewards/200-PUT-reward.json
-    '401':
-      description: Unauthorized    
+    "401":
+      description: Unauthorized
 delete:
   operationId: deleteReward
   summary: Delete Reward
-  tags:    
+  tags:
     - Rewards
-  description: >- 
+  description: >-
     Delete the Reward with the specified rewardId from the Server
   responses:
-    '200':
-      description: Deleted reward      
-    '401':
-      description: Unauthorized    
+    "200":
+      description: Deleted reward
+    "401":
+      description: Unauthorized

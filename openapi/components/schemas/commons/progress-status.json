@@ -1,0 +1,11 @@
+{
+    "enum": [
+        "blocked",
+        "completed",
+        "failed",
+        "not_started",
+        "on_going",
+        "reverted"
+    ],
+    "type": "string"
+}
